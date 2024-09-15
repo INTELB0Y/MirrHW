@@ -1,0 +1,140 @@
+$base-color: #3A5F56;
+$second-color: #292C32;
+$white-color: #FFF;
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.btn{
+    color: $white-color;
+    background-color: $base-color;
+    border-radius: 6px;
+    padding : 10px 18px
+}
+
+.header{
+    &_wrap{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    &_box{
+        display:flex;
+        align-items: center;
+    }
+
+    &_menu{
+        display: flex;
+    }
+
+    &_link{
+        color: $base-color;
+        font-size: 16px;
+
+        &:hover{
+            color: lightgreen;
+        }
+    }
+
+    &_item{
+        margin-right: 30px;
+    }
+
+    &_cart{
+            display:flex;
+            gap: 8px;
+        &::before{
+            content: ' ';
+            background: url(../img/cart.svg);
+            display: block;
+            width: 17px;
+            height: 17px;
+        }
+        &::after{
+            content: '0';
+            color: $base-color;
+            background-color: #FFF;
+            padding: 0 6px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.main{
+    background: url(../img/Background.png) no-repeat center center / cover;
+    padding: 100px 0;
+
+    &_wrap{
+        display: flex;
+        gap: 64px;
+        align-items: center;
+    }
+
+    &_title{
+        color:$base-color;
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    &_text{
+        color:$base-color;
+        font-size: 16px;
+        margin-bottom: 27px;
+    }
+}
+
+.services{
+    padding: 100px 0;
+
+    &_title{
+        color:$base-color;
+        font-size: 32px;
+        margin-bottom: 11;
+        text-align: center;
+    }
+
+    &_text{
+        color:$second-color;
+        font-size: 16px;
+        max-width: 590px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &_row{
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1;
+    }
+
+    &_card{
+        max-width: 380px;
+        border-radius: 16px;
+        background-color: #F4F3F0;
+        padding: 30px;
+    }
+}
